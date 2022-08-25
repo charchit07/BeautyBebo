@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #navbar-1{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1%;
+        }
+
+          #navbar-1 > div{
+            display: flex;
+            font-size: 30px;
+        } 
+
+        #navbar-1> div>button{
+            border-radius: 20px;
+            background-color: pink;
+            border: none;
+        }
+
+        .fun > div > button{
+            border-radius: 5px;
+            font-size: 20px;
+           
+        }
+
+        #navbar-2{
+            width: 100%;
+            height: 100px;
+          
+            display: flex;
+           margin: auto;
+        }
+
+        #navbar-2 img{
+            padding-left: 2%;
+            align-items: center;
+        } 
+
+        img + div{
+         width: 50%;
+         height: 100%;
+        
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         }
+
+         #navbar-3{
+            width: 100%;
+            height: 30%;
+            display: flex;
+           background-color: rgb(221, 17, 211);
+            padding: 1%;
+            color: white;
+          }
+
+             #navbar-3> div{
+             margin-left: 10px;
+             margin-right: 20px;
+             font-size: 15px;
+             display: flex; 
+             justify-content: space-between;
+
+         } 
+         
+           .cart  {
+         
+            margin-left: 80%;
+          }
+
+           .cart > div{
+            margin-right: 45px;
+
+          }
+
+          #Middle-Portion{
+            display: flex;
+            width: 90%;
+            height: auto;
+            margin: auto;
+         
+            justify-content: space-between;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        
+          #Box-1{
+        
+           height: 400px;
+           
+          }
+
+          #Box-2{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+           
+            margin-bottom: 20px;
+            margin-top: 10px;
+           }
+
+          #Box-2> img{
+            width: 100%;
+           height: auto;
+           transform: translate(-50%);
+          }
+           
+          #center-portion{
+           
+            width:90% ;
+        
+            margin: auto;
+            height: auto;
+            margin-bottom: 30px;
+          }
+
+          #center-portion > img{
+            width: 100%;
+          }
+           
+          #images{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            width: 90%;
+            margin: auto;
+          
+          }
+         
+          #images>div{
+            text-align: center;
+           box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+          }
+
+          #images>div>img{
+            width: 100%;
+          }
+
+          
+
+    </style>
+</head>
+<body>
+          <div id="container">
+            <!-- navbar-1 start -->
+        <div id="navbar-1">
+            <div> Super Natural Beauty</div>
+            <div><button> SHOP NOW </button></div>
+            <div class="fun">
+                <div><button>GET IN ON Google Pay</button>
+                </div>
+                </div>
+        </div>
+        <!-- navbar-1 end -->
+        
+        <div id="navbar-2">
+            <!-- navbar-2 strat -->
+            <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+            <div>
+                <p> All Categoires  </p>
+                <p> Enter Your Search...</p>
+            </div>
+        </div>
+        <!-- navbar-2 end -->
+        
+        <div id="navbar-3">
+               <!-- navbar-3 strat -->
+             <div>MAKUP^</div>
+                <div>SKIN^</div>
+                <div>HAIR^</div>
+                <div>PERSONAL CARE^</div>
+                <div>MOM & BABY CARE ^</div>
+                <div>FRAGARNCES ^</div>
+                <div>AYURDEV ^</div>
+                <div> BRAND^</div>
+                <div class="cart">
+                <div > MY CART -₹ 0.00</div>
+                </div>
+            </div>
+          
+               <!-- navbar-3 end -->
+
+               <div id="Middle-Portion">
+                <div id="Box-1">
+                  <div><h1> ALL CATEGORIES</h1></div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="">Skin
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="">Hair
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="">Personal Care
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby Care
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="">Fragrance
+                  </div>
+
+                  <div>
+                    <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda
+                  </div>
+                </div>
+
+                <div id="Box-2">
+                <img src="https://images.unsplash.com/photo-1534531904504-65da6a62d34f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=462&q=80" alt="">
+                </div>
+
+               </div>
+
+               <div id="center-portion">
+                 <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
+                 </div>
+
+                 <div id="images">
+                 <div>
+                  <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908005358923-04.png" alt="">
+                  <p> Organic Harvest Hair Oil For Hair Strengtheing </p>
+                  <p></p>
+                  <h2>₹ 581.00  10% off</h2>
+                  <div>
+                    <button>Add to cart </button>
+                    </div>
+                 </div>
+                 <div>
+                  <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/3/239dca18906143701724_1.jpg" alt="">
+                  <p> Organic Harvest Aloe vera Gel Enriched With 100% Pure Aloe Vera </p>
+                  <p></p>
+                  <h2>₹ 439.00  11% off</h2>
+                  <div>
+                    <button>Add to cart </button>
+                    </div>
+                 </div>
+                 <div>
+                  <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/2/e278ca18906143701717_1.jpg" alt="">
+                  <p> Organic Harvest Aloe vera Gel Enriched With 100% Pure Aloe Vera</p>
+                  <p></p>
+                  <h2>₹ 439.00  11% off</h2>
+                  <div>
+                    <button>Add to cart </button>
+                    </div>
+                 </div>
+                 <div>
+                  <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908005358084.png" alt="">
+                  <p> Organic Harvest Hair Spa For Dry & Damage</p>
+                  <p></p>
+                  <h2>₹ 806.00  10% off</h2>
+                  <div>
+                    <button>Add to cart </button>
+                    </div>
+                 </div>
+                   
+                 </div>
+
+                </div>
+    </div>
+</body>
+</html>
