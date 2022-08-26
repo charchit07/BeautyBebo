@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        #navbar-1{
+            display: flex;
+            justify-content: space-evenly;
+             /* padding: 1%; 
+            margin-top: 10px; */
+        }
+
+          #navbar-1 > div{
+            display: flex;
+            font-size: 30px;
+        } 
+
+        #navbar-1> div>button{
+            border-radius: 20px;
+            background-color: pink;
+            border: none;
+        }
+
+        .fun > div > button{
+            border-radius: 5px;
+            font-size: 20px;
+           width: 30px;
+        }
+
+        #navbar-2{
+            width: 100%;
+            height: 100px;
+          
+            display: flex;
+           margin: auto;
+        }
+
+        #navbar-2 img{
+            padding-left: 2%;
+            align-items: center;
+        } 
+
+        img + div{
+         width: 50%;
+         height: 100%;
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+
+         }
+
+         #navbar-3{
+            width: 100%;
+            height: 30%;
+            display: flex;
+           background-color: rgb(221, 17, 211);
+            padding: 1%;
+            color: white;
+          }
+
+             #navbar-3 > div{
+             margin-left: 10px;
+             margin-right: 20px;
+             font-size: 15px;
+             display: flex; 
+             justify-content: space-between;
+
+         } 
+
+           #Middle-Portion{
+            display: flex;
+            width: 90%;
+            height: auto;
+            margin: auto;
+            /* justify-content: space-between; */
+            margin-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          }
+           
+           
+          #Box-1{
+          height: 400px;
+          width: 30%;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+       } 
+
+        #Box-3{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(14,auto);
+            gap: 20px;
+            width: 80%;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+           } 
+          
+           #Box-3>div{
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+           }
+
+           
+           #Middle-Portion>#Box-3{
+            margin-top: 100px;
+           }
+
+          
+           #Box-3>div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+           }
+
+           #Box-3>div>img{
+           width: 100%;
+          
+           }
+           #Box-3>div>h2{
+            color: rgb(221, 17, 211);
+            font-size: 20px;
+           }
+
+          #Box-2> div>h1{
+          text-align: left;
+         font-size: 20px;  
+        }
+          
+        #Box-2> div{
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+         #Box-2> .fun> button{
+          border-radius: 0px;
+          border:none
+         }
+         
+         #Bottom-Para{
+          width: 90%;
+          margin: auto;
+         }
+          
+         #Bottom-Para > h1{
+           font-size: 20px;
+         }
+          
+         #Bottom-Para > h1:hover{
+            color: rgb(209, 13, 128);
+         }
+         #Bottom-Portion{
+           width: 100%;
+           height: 400px;
+           display:flex;
+           background-color: black;
+           color: white;
+         }
+         
+         #Bottom-Portion > div{
+          width: 23%;
+          height: 400px;
+          margin: auto;
+
+         }
+
+         #Bottom-Portion > div>h3{
+          font-size: 20px;
+         }
+
+         .pink{
+          color: rgb(209, 13, 128);
+         }
+
+         #Bottom-Portion > div>p:hover{
+          color:rgb(209, 13, 128);
+         }
+         
+    </style>
+</head>
+<body>
+      <div id="container">
+        <!-- navbar-1 start -->
+       <div id="navbar-1">
+              <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+        <!-- <div> Super Natural Beauty</div>
+        <div><button> SHOP NOW </button></div> -->
+        <div class="fun">
+            <img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt=""> 
+            </div>
+            </div>
+
+            <div id="navbar-2">
+                <!-- navbar-2 strat -->
+                <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+                <div>
+                    <p> All Categoires  </p>
+                    <p> Enter Your Search...</p>
+                </div>
+            </div>
+            <!-- navbar-2 end -->
+            
+            <div id="navbar-3">
+                   <!-- navbar-3 strat -->
+                 <div>MAKEUP^</div>
+                    <div>SKIN^</div>
+                    <div>HAIR^</div>
+                    <div>PERSONAL CARE^</div>
+                    <div>MOM & BABY CARE ^</div>
+                    <div>FRAGARNCES ^</div>
+                    <div>AYURDEV ^</div>
+                    <div> BRAND^</div>
+                    <div class="cart">
+                    <div > MY CART -₹ 0.00</div>
+                    </div>
+                </div>
+            
+                <div id="Middle-Portion">
+                    <div id="Box-1">
+                       <div>Categoires     +</div>
+      
+                        <div>
+                          <h3>SHOP BY       +</h3>
+                        </div>
+      
+                        <div>
+                          SKIN TYPE          +
+                        </div>
+      
+                        <div>
+                         COLOR               +
+                        </div>
+      
+                        <div>
+                          PRICE              +
+                        </div>
+      
+                        <div>
+                          BRAND              +
+                        </div>
+      
+                        <div>
+                         SHADE               +
+                        </div>
+      
+
+                        <div>
+                        FORMULATION          +
+                           </div>
+         
+                      </div>
+      
+                      <div id="Box-2">
+                      <div>
+                        <h1>MAKEUP</h1>
+                      </div>
+                      <div class="fun"><button> Sort : Position </button></div>
+                      </div>
+
+                       <div id="Box-3">
+                        <div>
+                            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/41phdvteb8l._sl1100_.jpg" alt="">
+                            <p> 
+                                Plum Prep Set Go Face Primer </p>
+                            <p></p>
+                            <h2>₹ 473.00  10% off</h2>
+                            <div> <button>Add to cart </button>  </div>
+                             </div>
+
+                           <div>
+                            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51dfv9yk60l._sl1080__3_1.jpg" alt="">
+                            <p> 
+                                Plum Matterrific Lipstick</p>
+                            <p></p>
+                            <h2>₹ 439.00  12% off</h2>
+                            <div> <button>Add to cart </button>  </div>
+                             </div>
+
+                             
+                           <div>
+                            <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/5/75e7324plumx00000244a_2.jpg" alt="">
+                            <p> 
+                                Plum Matte In Heaven Liquid Lipstick </p>
+                            <p></p>
+                            <h2>₹ 434.00  13% off</h2>
+                            <div> <button>Add to cart </button>  </div>
+                             </div>
+
+                             <div>
+                                <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/7/d71e283cflt0110cmp5427_7.jpg" alt="">
+                                <p> 
+                                    Plum Legit Matte Talc-Free Compact With SPF15 </p>
+                                <p></p>
+                                <h2>₹ 473.00  10% off</h2>
+                                <div> <button>Add to cart </button>  </div>
+                                 </div>
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/66ab2138906087778288_2.jpg" alt="">
+                                    <p> 
+                                        Mamaearth Glow Serum Foundation With Vitamin C & Turmeric For 12-Hour </p>
+                                    <p></p>
+                                    <h2>₹ 473.00  10% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/5/551d3ed8906087778639_3.jpg" alt="">
+                                    <p> Mamaearth Glow Oil Control Compact SPF 30 With Vitamin C & Turmeric</p>
+                                    <p></p>
+                                    <h2> ₹473.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+                              
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/_/3_7_1_1.jpg" alt="">
+                                    <p> Mamaearth Glow Oil Control Compact SPF 30 With Vitamin C & Turmeric</p>
+                                    <p></p>
+                                    <h2> ₹473.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/w/i/with_monocarton.jpg" alt="">
+                                    <p>Mamaearth Soothing Waterproof Eyeliner With Almond Oil & Castor Oil For</p>
+                                    <p></p>
+                                    <h2> ₹349.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/z/ezgif-3-78e7fbbb25.jpg" alt="">
+                                    <p>Lakme Absolute Liquid Highlighter</p>
+                                    <p></p>
+                                    <h2> ₹621.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg" alt="">
+                                    <p>Miss Claire Eyelash Glue - Clear Tone</p>
+                                    <p></p>
+                                    <h2> ₹322.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/0/d07adf529204_i-8901030867583.jpg" alt="">
+                                    <p>Lakme Absolute Liquid Highlighter</p>
+                                    <p></p>
+                                    <h2> ₹550.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg" alt="">
+                                    <p>Maybelline New York Fit Me Primer - Dewy+Smooth</p>
+                                    <p></p>
+                                    <h2> ₹550.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg" alt="">
+                                    <p>L'Oreal Paris Infallible Full Wear Concealer</p>
+                                    <p></p>
+                                    <h2> ₹735.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg" alt="">
+                                    <p>Faces Canada Ultime Pro Matte Play Eyeliner</p>
+                                    <p></p>
+                                    <h2> ₹604.00 7% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/c/bcf6c6c8904052434726__2_.jpg" alt="">
+                                    <p>Colorbar Intensify Liquid Gel Eyeliner - Arabian Nights</p>
+                                    <p></p>
+                                    <h2> ₹699.00 7% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/618a4rcg7il._sl1500_.jpg" alt="">
+                                    <p>NYX Professional Makeup Pore Filler</p>
+                                    <p></p>
+                                    <h2> ₹1378.00 5% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/r/artboard_1_5.jpg" alt="">
+                                    <p>Mamaearth Naturally Matte Lip Serum - Matte Liquid Lipstick With Vitamin C & E</p>
+                                    <p></p>
+                                    <h2> ₹539.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904052409748-2.jpg" alt="">
+                                    <p>Colorbar Infinite 24Hrs Eyeliner</p>
+                                    <p></p>
+                                    <h2> ₹651.00 7% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_91.jpg" alt="">
+                                    <p>Miss Claire Mineral Blusher Kit - 3716-4-04</p>
+                                    <p></p>
+                                    <h2> ₹338.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/_/3_125_1.jpg" alt="">
+                                    <p>NYX Professional Makeup The Marshmellow Primer
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹1425.00 5% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_210_13.jpg" alt="">
+                                    <p>Blue Heaven 12-In-1 Bling Eyeshadow Palette - Cocktail Fever - (Pack Of 2)
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 450.00 5% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/21_12_6.jpg" alt="">
+                                    <p>Faces Canada Ultime Pro Eye Shadow Palette - Nude 01
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 920.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/0/20_12_5.jpg" alt="">
+                                    <p>NYX Professional Makeup Epic Ink Liner - Black
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 759.00 8% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/8/58.jpg" alt="">
+                                    <p>PAC Transparent Mascara
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 325.00</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/6/56_2.jpg" alt="">
+                                    <p>Colorbar Lash Illusion Mascara Lengthening Lash & Volumising Mascara
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 446.00 10% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/4/54_2.jpg" alt="">
+                                    <p>Faces Canada Peaches N Cream Tinted Moisturizer - Light 01
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 539.00 10% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/4/44_2_3.jpg" alt="">
+                                    <p>Mamaearth Cherry Tinted 100% Natural Lip Balm With Cherry And Coconut Oil
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 299.00 </h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/4/44_2_3.jpg" alt="">
+                                    <p>Mamaearth Cherry Tinted 100% Natural Lip Balm With Cherry And Coconut Oil
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 299.00 </h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/9/39_2_2.jpg" alt="">
+                                    <p>Mamaearth Charcoal Black Long Stay Kohl With Castor Oil And Chamomile For
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 499.00 10% Off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/37_4_2.jpg" alt="">
+                                    <p>Lakme Absolute Illuminating Blush Shimmer Brick - In Pink
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 689.00 5% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/36_4_2.jpg" alt="">
+                                    <p>Faces Canada Ultime Pro HD All That Glow Highlighter
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 809.00 10% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/_/8_41_4.jpg" alt="">
+                                    <p>Mamaearth Rose Tinted 100% Natural Lip Balm With Rose Oil And Castor Oil
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 809.00 10% off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+                                
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/_/6_87_6.jpg" alt="">
+                                    <p>PAC Lower Lash Mascara
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 545.00 </h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_90_5.jpg" alt="">
+                                    <p>Faces Canada Ultime Pro A Matte Made In Heaven Ink Eyeliner
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 539.00  10%off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/_/2_174_6.jpg" alt="">
+                                    <p>Blue Heaven Bling Matte + Metallic Eyeshadow Palette - Subtle Romance -
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 450.00  10%off</h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+
+                                 <div>
+                                    <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_90_3.jpg" alt="">
+                                    <p>Mamaearth Ubtan Tinted 100% Natural Lip Balm With Turmeric & Saffron
+                                    </p>
+                                    <p></p>
+                                    <h2> ₹ 299.00 </h2>
+                                    <div> <button>Add to cart </button>  </div>
+                                 </div> 
+                       </div>
+                      </div>
+
+                <div id="Bottom-Para">
+                    <h1> Tips on Best Make-up for Winter</h1>
+
+                    <p>Winter dictates a drier and even flaky skin, that we all agree. This does not, however, mean that our face and neck should have a gloomy appearance. At Beauty Bebo, we believe that all you have to do is change your make-up combination.</p>
+                  
+                   <p>Better still, we provide these makeup kits online, so you don’t have to stress your skin in the cold looking for makeup solutions.
+
+                    Let’s get the show on the road on some of the basics of the best makeup for winter;</p>
+
+                    <h1> Include Moisturizing Solutions</h1>
+                   
+                    <p>During winter, as said before, your skin will run dry. Thus, always have a moisturizer in your kit. Our nourishing natural moisturizers will sort you out on this.</p>
+                   
+                    <p>Cream or liquefied foundation should also replace your ponds and powders. This way, you will treat the skin that is threatening to go flaky, while maintaining an attractive outlook.</p>
+                    
+                    <p>The highlighter should also be liquid. Primer lipstick that leaves a luminous glow will finish the pretty look.</p>
+                    
+                   <p> Let your neck, lips, eyes and face in general not change for the worse, but for the better. Surprise everyone you come across with your new winter makeup solutions. </p>
+                 
+                   <p> In summary, ensure that the better part of your make-up kit is filled with moisturizing agents.</p>
+                  
+                   <h1> Feel Free to Reach Out to Beauty Bebo</h1>
+
+                <p>Not sure about the exact combinations for your sensitive skin? Reach out to Beauty Bebo. Our friendly customer care is always online and on call to answer your queries and give advice where necessary. </p>
+                
+            </div>
+            
+            <div id="Bottom-Portion">
+                <div>
+                 <h3> CONTACT INFO</h3>
+                 <p class="pink">-------</p>
+                 <p> (+91) 7877061041</p>
+                 <p> support@beautybebo.com
+                   sales@beautybebo.com</p>
+                   <h4>Open time: 10:00AM - 7:00PM</h4>
+                </div>
+ 
+                <div>
+                 <h3>QUICK LINKS</h3>
+                 <p class="pink">-------</p>
+                 <p> ~ About us</p>
+                 <p> ~ Contact Us</p> 
+                  <p> ~ Terms & Conditions </p> 
+                  <p> ~ Privacy Policy </p> 
+                  <p> ~ Return and Refund Policy</p> 
+                  <p> ~ Shipping Policy</p>
+                </div>
+ 
+                <div>
+                 <h3>CUSTOMER INFO</h3>
+                 <p class="pink">-------</p>
+                 <p> ~ My Account</p>
+                 <p> ~ Track your Order</p>
+                 <p> ~  Order Returns</p>
+                 <p> ~ Wishlist</p>
+                 <p> ~ News & Events</p>
+                 <p> ~ FAQ</p>
+                </div>
+ 
+                <div>
+                 <h3>CATEGORIES</h3>
+                 <p class="pink">-------</p>
+                 <p> ~ Makeup</p>
+                  <p> ~ Skin </p>
+                   <p> ~ Hair</p>
+                   <p> ~ Personal Care </p>
+                  <p> ~ Mom & Baby Care </p> 
+                  <p> ~ Fragrance </p> 
+                  <p> ~ Ayurveda</p>
+                </div>
+               </div>
+ </div>        
+</body>
+</html>
