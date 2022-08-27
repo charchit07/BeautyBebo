@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
     <style>
          body{
             margin: 0;
@@ -13,81 +21,205 @@
         }
 
         #navbar-1{
-            display: flex;
-            justify-content: space-evenly;
+            /* display: flex;
+            justify-content: space-evenly; */
              /* padding: 1%; 
             margin-top: 10px; */
         }
 
-          #navbar-1 > div{
-            display: flex;
-            font-size: 30px;
-        } 
+        #navbar-1>div {
+      display: flex;
+      position: relative;
+      align-items: center;
+    }
 
-        #navbar-1> div>button{
-            border-radius: 20px;
-            background-color: pink;
-            border: none;
-        }
+    .play-btn {
+      position: absolute;
+      right: 50px;
+    }
 
-        .fun > div > button{
-            border-radius: 5px;
-            font-size: 20px;
-           width: 30px;
-        }
+    .play-btn img {
+      height: 50px;
+    }
 
-        #navbar-2{
-            width: 100%;
-            height: 100px;
-          
-            display: flex;
-           margin: auto;
-        }
+    #navbar-2 {
+      width: 100%;
+      height: 75px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+    }
 
-        #navbar-2 img{
-            padding-left: 2%;
-            align-items: center;
-        } 
+    #navbar-2 img {
+      padding-left: 5%;
+      align-items: center;
+    }
 
-        img + div{
-         width: 50%;
-         height: 100%;
-         display: flex;
-         justify-content: space-evenly;
-         align-items: center;
+    .search-wrap{
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
 
-         }
+     #navbar-2 .search-bar {
+       display: flex;
+       border: 1px solid #ccc;
+       padding: 5px 15px;
+       background: #fff;
+     }
 
-         #navbar-3{
-            width: 100%;
-            height: 30%;
-            display: flex;
-           background-color: rgb(221, 17, 211);
-            padding: 1%;
-            color: white;
-          }
+     #navbar-2 .search-bar select, input {
+      border: none;
+     }
 
-             #navbar-3 > div{
-             margin-left: 10px;
-             margin-right: 20px;
-             font-size: 15px;
-             display: flex; 
-             justify-content: space-between;
+     #navbar-2 .search-bar select {
+      width: 200px;
+     }
 
-         } 
+     #navbar-2 .account {
+      display: flex;
+      padding-right: 5%;
+      align-items: center;
+     }
 
-           #Middle-Portion{
-            display: flex;
-            width: 90%;
-            height: auto;
-            margin: auto;
-            /* justify-content: space-between; */
-            margin-top: 50px;
-            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-          }
+     #navbar-2 .account .wishlist {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 20px;
+     }
+
+     .acc-section .user {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 3px;
+     }
+
+     #navbar-3 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 85% 15%;
+      align-items: center;
+      background-color: #dd0285;
+      padding: 0 5%;
+      color: white;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .dropdown .dropbtn, .dropbtn-1,.dropbtn-2,.dropbtn-3,.dropbtn-4,.dropbtn-5,.dropbtn-6,.dropbtn-7{
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn, .dropbtn-1,.dropbtn-2,.dropbtn-3,.dropbtn-4,.dropbtn-5,.dropbtn-6,.dropbtn-7{
+      background: rgba(0, 0, 0, 0.1)
+    }
+
+    .dropbtn:hover ~  #makeup  {
+      display: block;
+    }
+
+    .dropbtn-1:hover ~ #skin  {
+      display: block;
+    }
+
+    .dropbtn-2:hover ~ #hair  {
+      display: block;
+    }
+
+    .dropbtn-3:hover ~ #personal-care {
+      display: block;
+    }
+
+    .dropbtn-4:hover ~ #mom-baby-care {
+      display: block;
+    }
+
+    .dropbtn-5:hover ~ #fragrance {
+      display: block;
+    }
+
+    .dropbtn-6:hover ~ #ayurveda {
+      display: block;
+    }
+
+    .dropbtn-7:hover ~ #brand {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      background-color: #fff;
+      top: 225px;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      padding: 0 5%;
+    }
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: auto;
+      padding: 20px;
+      /* padding: 10px; */
+    }
+
+    .column h3 {
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .column a {
+      float: none;
+      color: #bbb;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .column a:hover {
+      background-color: #ddd;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .cart {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cart>div {
+      margin-right: 45px;
+
+    }
+
+    #Middle-Portion{
+     display: flex;
+     width: 90%;
+     height: auto;
+      margin: auto;
+      /* justify-content: space-between; */
+       margin-top: 50px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
            
            
-          #Box-1{
+        #Box-1{
           height: 400px;
           width: 30%;
           box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
@@ -122,10 +254,18 @@
            width: 100%;
           
            }
+           
            #Box-3>div>h2{
             color: rgb(221, 17, 211);
             font-size: 20px;
-           }
+          }
+          #Box-3>div>div>button{
+            background-color: rgb(221, 17, 211);
+            font-size: 20px;
+            border: none;
+            color:white;
+            border-radius: 5px;
+          }
 
           #Box-2> div>h1{
           text-align: left;
@@ -153,6 +293,7 @@
          #Bottom-Para > h1:hover{
             color: rgb(209, 13, 128);
          }
+
          #Bottom-Portion{
            width: 100%;
            height: 400px;
@@ -180,44 +321,390 @@
           color:rgb(209, 13, 128);
          }
          
+             
+      /* keep media queries at the bottom */
+     /* Medium screens */
+    @media all and (min-width: 451px) and (max-width: 750px) {
+    #navbar-1 {
+      display: flex;
+      }
+
+    #navbar-2 {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      margin: auto;
+    }
+    
+    #navbar-3 {
+        width: 100%;
+         height: 30%;
+       display: flex; 
+        color: white;
+        overflow: hidden;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+
+        #Box-3{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(14,auto);
+            gap: 20px;
+            width: 80%;
+            /* margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+      }
+      
+         #Bottom-Para{
+          width: 90%;
+          margin: auto;
+         }
+}
+
+ /* Small screens */
+  @media all and (min-width: 100px) and (max-width: 450px) {
+
+   #navbar-1 {
+      display: flex;
+     width: 90%;
+    }
+
+     #Box-3{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(14,auto);
+            gap: 20px;
+            width: 80%;
+            /* margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+        }
+        
+        #Bottom-Para {
+          width: 90%;
+          margin: auto;
+          
+         }
+
+   }
     </style>
 </head>
-<body>
+<>
       <div id="container">
         <!-- navbar-1 start -->
-       <div id="navbar-1">
-              <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
-        <!-- <div> Super Natural Beauty</div>
-        <div><button> SHOP NOW </button></div> -->
-        <div class="fun">
-            <img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt=""> 
-            </div>
-            </div>
+        <div id="navbar-1" class="w-100">
+         <div class="w-100"> 
+           <img class="w-100" src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+           <span class="play-btn"> <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-10"><img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt=""></a></span>
+         </div>
+       </div>
+       </div>
 
-            <div id="navbar-2">
-                <!-- navbar-2 strat -->
-                <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
-                <div>
-                    <p> All Categoires  </p>
-                    <p> Enter Your Search...</p>
-                </div>
-            </div>
+       <div id="navbar-2">
+         <!-- navbar-2 strat -->
+         <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+         <div class="search-wrap">
+           <div class="search-bar">
+             <select placeholder="All Categories">
+               <option>All Categories</option>
+               <option>----Makeup</option>
+               <option>-------Face</option>
+               <option>--------Foundation</option>
+               <option>--------Blush</option>
+               <option>--------Highlighter</option>
+               <option>---------Concelar</option>
+               <option>---------Compact & Powder</option>
+               <option>----------Face Primer</option>
+               <option>-----------Makeup Remover</option>
+             </select>
+             <div style="margin-left: 20px;">
+               <input type="text" placeholder="Enter Your Search...">
+               <span><i class="fa fa-search" aria-hidden="true" style="color: #bbb;"></i></span>
+             </div>
+           </div>
+         </div>
+         <div class="account">
+           <div class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></div>
+           <div class="acc-section">
+             <span class="user"><i class="fa fa-user" aria-hidden="true"></i></span>
+             <span>My Account</span>
+           </div>
+         </div>
+       </div>
+      
             <!-- navbar-2 end -->
             
             <div id="navbar-3">
-                   <!-- navbar-3 strat -->
-                 <div>MAKEUP^</div>
-                    <div>SKIN^</div>
-                    <div>HAIR^</div>
-                    <div>PERSONAL CARE^</div>
-                    <div>MOM & BABY CARE ^</div>
-                    <div>FRAGARNCES ^</div>
-                    <div>AYURDEV ^</div>
-                    <div> BRAND^</div>
-                    <div class="cart">
-                    <div > MY CART -₹ 0.00</div>
-                    </div>
-                </div>
+               <!-- navbar-3 strat -->
+               <div class="dropdown">
+                 <button class="dropbtn">MAKUP
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-1">SKIN
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-2">HAIR
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-3">PERSONAL CARE
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-4">MOM & BABY CARE
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-5"> FRAGARNCES
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-6"> AYURVEDA
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <button class="dropbtn-7"> BRANDS
+                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                 </button>
+           
+                 <div id="makeup" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>FACE</h3>
+                       <a href="#">BB Cream</a>
+                       <a href="#">Blush</a>
+                       <a href="#">Bronzer</a>
+                       <a href="#">CC Cream</a>
+                       <a href="#">Counter</a>
+                       <a href="#">Concealer</a>
+                       <a href="#">Compact & Powder</a>
+                       <a href="#">Face Primer</a>
+                       <a href="#">Foundation</a>
+                       <a href="#">Highlighters</a>
+                       <a href="#">Loose Powder</a>
+                       <a href="#">Makeup Kits</a>
+                       <a href="#">Makeup Remover</a>
+                       <a href="#">Setting Spray</a>
+                     </div>
+                     <div class="column">
+                       <h3>EYE CARE</h3>
+                       <a href="#">Dark Cricles</a>
+                       <a href="#">Eye Contour Care</a>
+                       <a href="#">Eye Cream</a>
+                       <a href="#">Eye Masks</a>
+                       <a href="#">Eye Serums</a>
+                       <a href="#">Puffins</a>
+                       <a href="#"> Under Eye Creams</a>
+                       <a href="#"> Under Eye Wrinkles</a>
+                     </div>
+                     <div class="column">
+                       <h3>LIPS </h3>
+                       <a href="#">Lipstick</a>
+                       <a href="#">Liquid Lipsticks</a>
+                       <a href="#">Lip Liner</a>
+                       <a href="#">Lip Gloss</a>
+                       <a href="#">Lip Balm</a>
+                       <a href="#">Lip Crayon</a>
+                     </div>
+           
+                     <div class="column">
+                       <h3>NAILS </h3>
+                       <a href="#">Manicure & Pedicure Kits</a>
+                       <a href="#"> Nail Polish</a>
+                       <a href="#"> Nail Care</a>
+                       <a href="#"> Nail Polish Sets </a>
+                       <a href="#"> Nail Art Kits </a>
+                       <a href="#"> Nail Polish Remover</a>
+                     </div>
+           
+                     <div class="column">
+                       <h3>TOOLS BRUSHES </h3>
+                       <a href="#"> Blush Brush</a>
+                       <a href="#"> Eyelash Curlers</a>
+                       <a href="#"> Eye Brush</a>
+                       <a href="#"> Face Brush </a>
+                       <a href="#"> Lip Brush </a>
+                       <a href="#"> Makeup Pouches</a>
+                       <a href="#"> Mirrors</a>
+                       <a href="#"> Sponges & Applicators</a>
+                     </div>
+           
+                   </div>
+                 </div>
+                 
+                 <div id="skin" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>EYE CARE</h3>
+                       <a href="#">Dark Circles</a>
+                       <a href="#">Eye Counter Care</a>
+                       <a href="#">Eye Cream</a>
+                       <a href="#">Eye Masks</a>
+                       <a href="#">Eye Serums</a>
+                       <a href="#">Puffins</a>
+                       <a href="#">Eye Cream</a>
+                     </div>
+                     <div class="column">
+                       <h3>FACE CARE</h3>
+                       <a href="#">Anti Ageing Creams</a>
+                       <a href="#"> Bleach Creams</a>
+                       <a href="#"> Face Wash</a>
+                       <a href="#"> Facial Wipes</a>
+                       <a href="#"> Facial Oil</a>
+                       <a href="#"> Facial Kits</a>
+                     </div>
+                   </div>
+                 </div>
+           
+                 <div id="hair" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>HAIR CAER</h3>
+                       <a href="#">Color Protection</a>
+                       <a href="#">Dandruff</a>
+                       <a href="#"> Dry Shampoo</a>
+                       <a href="#"> Gels & Waxes</a>
+                       <a href="#"> Hair Spray</a>
+                       <a href="#"> Hair Color / Dye</a>
+                       <a href="#"> Hair Creams & Masks</a>
+                       <a href="#"> Hair Styling</a>
+                     </div>
+                     <div class="column">
+                       <h3>HAIR LOSS</h3>
+                       <a href="#"> Conditioner</a>
+                       <a href="#"> Hair Oil</a>
+                       <a href="#"> Hair Serum</a>
+                       <a href="#"> Shampoo</a>
+                     </div>
+                     
+                   </div>
+                 </div>
+           
+                 <div id="personal-care" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>BATH & BODY</h3>
+                       <a href="#"> Body Cleansers</a>
+                       <a href="#"> Body Massage Oil</a>
+                       <a href="#"> Body Wash</a>
+                       <a href="#"> Cream</a>
+                       <a href="#"> Essential Oil</a>
+                       <a href="#"> Foot Cream</a>
+                       <a href="#"> Serum & Exfoliants</a>
+                     </div>
+                     <div class="column">
+                       <h3>BATHING ACCESSORIES</h3>
+                       <a href="#"> Bath Brushes</a>
+                       <a href="#"> Loofahs</a>
+                       <a href="#"> Shower Caps</a>
+                     </div>
+                     <div class="column">
+                       <h3> BATH & SHOWER</h3>
+                       <a href="#">Body Soaps</a>
+                       <a href="#"> Shower Gel</a>
+                     </div>
+                   </div>
+                 </div>
+               
+                 <div id="mom-baby-care" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>BATH & BODY</h3>
+                       <a href="#"> Body Cleansers</a>
+                       <a href="#"> Body Massage Oil</a>
+                       <a href="#"> Body Wash</a>
+                       <a href="#"> Cream</a>
+                       <a href="#"> Essential Oil</a>
+                       <a href="#"> Foot Cream</a>
+                       <a href="#"> Serum & Exfoliants</a>
+                     </div>
+                     <div class="column">
+                       <h3>BATHING ACCESSORIES</h3>
+                       <a href="#"> Bath Brushes</a>
+                       <a href="#"> Loofahs</a>
+                       <a href="#"> Shower Caps</a>
+                     </div>
+                     <div class="column">
+                       <h3> BATH & SHOWER</h3>
+                       <a href="#">Body Soaps</a>
+                       <a href="#"> Shower Gel</a>
+                     </div>
+                   </div>
+                 </div>
+           
+                 <div id="fragrance" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3> Perfumes</h3>
+                       <a href="#"> Deodorants</a>
+                       <a href="#"> Body Mist / Spray</a>
+                      </div>
+                   </div>
+                 </div>
+           
+           
+                 <div id="ayurveda" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>BATH & BODY</h3>
+                       <a href="#"> Body Cleansers</a>
+                       <a href="#"> Body Massage Oil</a>
+                       <a href="#"> Body Wash</a>
+                       <a href="#"> Cream</a>
+                       <a href="#"> Essential Oil</a>
+                       <a href="#"> Foot Cream</a>
+                       <a href="#"> Serum & Exfoliants</a>
+                     </div>
+                     <div class="column">
+                       <h3>BATHING ACCESSORIES</h3>
+                       <a href="#"> Bath Brushes</a>
+                       <a href="#"> Loofahs</a>
+                       <a href="#"> Shower Caps</a>
+                     </div>
+                     <div class="column">
+                       <h3> BATH & SHOWER</h3>
+                       <a href="#">Body Soaps</a>
+                       <a href="#"> Shower Gel</a>
+                     </div>
+                   </div>
+                 </div>
+           
+           
+                 <div id="brand" class="dropdown-content">
+                   <div class="row">
+                     <div class="column">
+                       <h3>BATH & BODY</h3>
+                       <a href="#"> Body Cleansers</a>
+                       <a href="#"> Body Massage Oil</a>
+                       <a href="#"> Body Wash</a>
+                       <a href="#"> Cream</a>
+                       <a href="#"> Essential Oil</a>
+                       <a href="#"> Foot Cream</a>
+                       <a href="#"> Serum & Exfoliants</a>
+                     </div>
+                     <div class="column">
+                       <h3>BATHING ACCESSORIES</h3>
+                       <a href="#"> Bath Brushes</a>
+                       <a href="#"> Loofahs</a>
+                       <a href="#"> Shower Caps</a>
+                     </div>
+                     <div class="column">
+                       <h3> BATH & SHOWER</h3>
+                       <a href="#">Body Soaps</a>
+                       <a href="#"> Shower Gel</a>
+                     </div>
+                   </div>
+                 </div>
+           
+             </div>
+               <div class="cart">
+                 <div> MY CART -₹ 0.00</div>
+               </div>
+             </div>
+           
+             <!-- navbar-3 end -->
+               
             
                 <div id="Middle-Portion">
                     <div id="Box-1">

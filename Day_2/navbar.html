@@ -19,69 +19,96 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      background: #f0f0f0;
     }
 
-    #navbar-1 {
-      display: flex;
-      /* justify-content: space-evenly;
-            padding: 1%; */
-    }
 
     #navbar-1>div {
       display: flex;
-      font-size: 30px;
+      position: relative;
+      align-items: center;
     }
 
-    #navbar-1>div>button {
-      border-radius: 20px;
-      background-color: pink;
-      border: none;
+    .play-btn {
+      position: absolute;
+      right: 50px;
     }
 
-    .fun>div>button {
+    .play-btn img {
+      height: 50px;
+    }
+
+   
+
+    /* .fun>div>button {
       border-radius: 5px;
       font-size: 20px;
 
-    }
+    } */
 
     #navbar-2 {
       width: 100%;
-      height: 100px;
-
+      height: 75px;
       display: flex;
       margin: auto;
+      justify-content: space-between;
     }
 
     #navbar-2 img {
-      padding-left: 2%;
+      padding-left: 5%;
       align-items: center;
     }
 
-    img+div {
-      width: 50%;
-      height: 100%;
-
+    .search-wrap{
       display: flex;
-      justify-content: space-evenly;
       align-items: center;
+      width: 50%;
     }
+
+     #navbar-2 .search-bar {
+       display: flex;
+       border: 1px solid #ccc;
+       padding: 5px 15px;
+       background: #fff;
+     }
+
+     #navbar-2 .search-bar select, input {
+      border: none;
+     }
+
+     #navbar-2 .search-bar select {
+      width: 200px;
+     }
+
+     #navbar-2 .account {
+      display: flex;
+      padding-right: 5%;
+      align-items: center;
+     }
+
+     #navbar-2 .account .wishlist {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 20px;
+     }
+
+     .acc-section .user {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 3px;
+     }
 
     #navbar-3 {
       width: 100%;
-      /* height: 30%;
-      display: flex; */
+      display: grid;
+      grid-template-columns: 85% 15%;
+      align-items: center;
       background-color: #dd0285;
-      /* padding: 1%; */
+      padding: 0 5%;
       color: white;
-
       overflow: hidden;
       font-family: Arial, Helvetica, sans-serif;
     }
-
-    /* .dropdown {
-      float: left;
-      overflow: hidden;
-    } */
 
     .dropdown .dropbtn, .dropbtn-1,.dropbtn-2,.dropbtn-3,.dropbtn-4,.dropbtn-5,.dropbtn-6,.dropbtn-7{
       font-size: 16px;
@@ -132,31 +159,33 @@
 
     .dropdown-content {
       display: none;
-      position: relative;
-      background-color: #f9f9f9;
+      position: fixed;
+      background-color: #fff;
+      top: 225px;
       width: 100%;
+      height: 100%;
       left: 0;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
       z-index: 1;
+      padding: 0 5%;
     }
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
       width: auto;
+      padding: 20px;
       /* padding: 10px; */
-      background-color: #fff;
-      height: 250px;
     }
 
     .column h3 {
       color: #000;
       font-size: 14px;
+      font-weight: 600;
     }
 
     .column a {
       float: none;
-      color: black;
-      padding: 16px;
+      color: #bbb;
       text-decoration: none;
       display: block;
       text-align: left;
@@ -174,7 +203,8 @@
     }
 
     .cart {
-      margin-left: 80%;
+      display: flex;
+      justify-content: center;
     }
 
     .cart>div {
@@ -185,26 +215,41 @@
     #Middle-Portion {
       display: flex;
       width: 90%;
-      height: auto;
       margin: auto;
-
-      justify-content: space-between;
-      margin-top: 10px;
-      margin-bottom: 10px;
+      padding: 20px 10px;
     }
 
     #Box-1 {
+     height: 400px;
+     width: 450px;
+     }
 
-      height: 400px;
+     #Box-1 .category {
+      display: flex;
+    align-items: center;
+    position: relative;
+    padding: 5px 0;
+     }
 
-    }
+     #Box-1 .category img{
+       height: 20px;
+       width: 20px;
+     }
 
-    #Box-2 {
+     #Box-1 .category .name{
+       font-size: 15px;
+       padding-left: 5px;
+     }
+
+     #Box-1 .category i{
+      color: #b0b0b0;
+      font-size: 12px;
+     }
+
+     #Box-2 {
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-
-      margin-bottom: 20px;
-      margin-top: 10px;
+      width: calc(100% - 450px);
     }
 
     #Box-2>img {
@@ -216,7 +261,6 @@
     #center-portion {
 
       width: 90%;
-
       margin: auto;
       height: auto;
       margin-bottom: 30px;
@@ -248,7 +292,19 @@
 
     #images>div>h2 {
       margin: 30px, 0px, 10px, 0px;
-      color: rgb(209, 13, 128)
+      color: rgb(209, 13, 128);
+      font-size: 20px;
+    }
+
+    #images>div>div>button{
+    background-color: rgb(209, 13, 128);
+    color: white;
+    border: none;
+    border-radius: 5px;
+   
+    }
+    #images>div>div{
+    margin: 30px, 0px, 10px, 0px;    
     }
 
     #summer {
@@ -282,15 +338,17 @@
 
     #section>div {
       text-align: center;
+      display: block;
     }
 
     #section>div>h4 {
       margin: 30px, 0px, 10px, 0px;
+      font-size: 10px;
     }
 
     #section>div:hover {
       background-color: rgb(209, 13, 128);
-      /* color:  rgb(209, 13, 128); */
+     
     }
 
     #images-1 {
@@ -315,7 +373,16 @@
 
     #images-1>div>h2 {
       /* padding-top: 30px,0px,0px,0px; */
-      color: rgb(209, 13, 128)
+      color: rgb(209, 13, 128);
+      font-size: 20px;
+    }
+
+    #images-1 > div>div>button{
+    background-color: rgb(209, 13, 128);
+    color: white;
+    border: none;
+    border-radius: 5px;
+
     }
 
     #center-portion-1 {
@@ -392,16 +459,139 @@
     #Bottom-Portion>div>p:hover {
       color: rgb(209, 13, 128);
     }
+    /* keep media queries at the bottom */
+   /* Medium screens */
+    @media all and (min-width: 451px) and (max-width: 750px) {
+    #navbar-1 {
+      display: flex;
+      }
+
+    #navbar-2 {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      margin: auto;
+    }
+    
+    #navbar-3 {
+        width: 100%;
+         height: 30%;
+       /* background-color: #dd0285; */
+       /* padding: 1%; */
+       display: flex; 
+        color: white;
+        overflow: hidden;
+       font-family: Arial, Helvetica, sans-serif;
+    }
+ 
+    /* #Middle-Portion {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: auto; 
+       justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px; 
+    } */
+
+    #Box-2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+
+    }
+  
+    #images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 90%;
+
+     }
+
+     #summer {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      width: 90%;
+    }
+     
+    #section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      /* grid-template-rows: 100px; */
+      gap: 20px;
+      /* width: 90%; */
+
+    }
+
+    #images-1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+
+    }
+      #center-portion-1 {
+      width: 90%;
+
+     }
+
+      #Bottom-Para {
+      width: 90%;
+      margin: auto;
+    }
+
+    #Bottom-Portion {
+      width: 100%;
+      height: 400px;
+      display: flex;
+    }
+
+    #Bottom-Portion>div {
+      width: 50%;
+      height: 400px;
+    }
+  }
+/* Small screens */
+@media all and (min-width: 100px) and (max-width: 450px) {
+  #navbar-1 {
+      display: flex;
+     width: 90%;
+    }
+
+    #images {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      width: 90%;
+     }
+    
+     #images-1 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+
+    }
+
+}
+
   </style>
 </head>
 
 <body>
   <div id="container">
     <!-- navbar-1 start -->
-    <div id="navbar-1">
-      <div> <img src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt=""></div>
-      <div class="fun">
-        <img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt="">
+    <div id="navbar-1" class="w-100">
+      <div class="w-100"> 
+        <img class="w-100" src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+        <span class="play-btn"> <a href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-10"><img src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt=""></a></span>
       </div>
     </div>
   </div>
@@ -410,9 +600,32 @@
   <div id="navbar-2">
     <!-- navbar-2 strat -->
     <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
-    <div>
-      <p> All Categoires </p>
-      <p> Enter Your Search...</p>
+    <div class="search-wrap">
+      <div class="search-bar">
+        <select placeholder="All Categories">
+          <option>All Categories</option>
+          <option>----Makeup</option>
+          <option>-------Face</option>
+          <option>--------Foundation</option>
+          <option>--------Blush</option>
+          <option>--------Highlighter</option>
+          <option>---------Concelar</option>
+          <option>---------Compact & Powder</option>
+          <option>----------Face Primer</option>
+          <option>-----------Makeup Remover</option>
+        </select>
+        <div style="margin-left: 20px;">
+          <input type="text" placeholder="Enter Your Search...">
+          <span><i class="fa fa-search" aria-hidden="true" style="color: #bbb;"></i></span>
+        </div>
+      </div>
+    </div>
+    <div class="account">
+      <div class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></div>
+      <div class="acc-section">
+        <span class="user"><i class="fa fa-user" aria-hidden="true"></i></span>
+        <span>My Account</span>
+      </div>
     </div>
   </div>
   <!-- navbar-2 end -->
@@ -684,18 +897,9 @@
 
 
     </div>
-
-    <!-- <div> MAKUP <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>SKIN <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>HAIR <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>PERSONAL CARE <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>MOM & BABY CARE <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>FRAGARNCES <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div>AYURDEV <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div>
-    <div> BRAND <span><i class="fa fa-chevron-down" aria-hidden="true"></i></span></div> -->
-    <!-- <div class="cart">
+    <div class="cart">
       <div> MY CART -₹ 0.00</div>
-    </div> -->
+    </div>
   </div>
 
   <!-- navbar-3 end -->
@@ -703,36 +907,49 @@
   <div id="Middle-Portion">
     <div id="Box-1">
       <div>
-        <h1> ALL CATEGORIES</h1>
+        <h4> <span style="margin-right: 5px;"><i class="fa fa-bars" aria-hidden="true"></i></span> ALL CATEGORIES</h4>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt=""> Makeup
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt="">
+        <span class="name">Makeup</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="">Skin
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="">
+        <span class="name">Skin</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="">Hair
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="">
+        <span class="name">Hair</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="">Personal Care
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="">
+        <span class="name">Personal Care</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> Mom & Baby
-        Care
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt=""> 
+        <span class="name">Mom & Baby Care</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="">Fragrance
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="">
+        <span class="name">Fragrance</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
-      <div>
-        <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> Ayurveda
+      <div class="category">
+        <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt=""> 
+        <span class="name">Ayurveda</span>
+        <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
       </div>
 
     </div>
@@ -984,3 +1201,9 @@
 </body>
 
 </html>
+
+<script>
+   document.querySelector(".w-100").addEventListener("click",function(){
+    document.getElementById("mom-baby-care").style="Display-Block";
+   })
+</script>
