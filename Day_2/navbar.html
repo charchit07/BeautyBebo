@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: #f0f0f0;
+    }
+
+
+    #navbar-1>div {
+      display: flex;
+      position: relative;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .play-btn {
+      position: absolute;
+      right: 50px;
+    }
+
+    .play-btn img {
+      height: 50px;
+    }
+
+
+
+    /* .fun>div>button {
+      border-radius: 5px;
+      font-size: 20px;
+
+    } */
+
+    #navbar-2 {
+      width: 100%;
+      height: 75px;
+      display: flex;
+      margin: auto;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    #navbar-2 img {
+      padding-left: 5%;
+      align-items: center;
+    }
+
+    .search-wrap {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+
+    #navbar-2 .search-bar {
+      display: flex;
+      border: 1px solid #ccc;
+      padding: 5px 15px;
+      background: #fff;
+    }
+
+    #navbar-2 .search-bar select,
+    input {
+      border: none;
+    }
+
+    #navbar-2 .search-bar select {
+      width: 200px;
+    }
+
+    #navbar-2 .account {
+      display: flex;
+      padding-right: 5%;
+      align-items: center;
+    }
+
+    #navbar-2 .account .wishlist {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 20px;
+    }
+
+    #navbar-2 .account .wishlist:hover{
+       background-color:#dd0285 ;
+       color: white;
+     }
+
+    .acc-section .user {
+      padding: 4px 8px;
+      border: 1px solid;
+      margin-right: 3px;
+    }
+
+    .acc-section .user:hover{
+      background-color: #dd0285;
+      color: white;
+     }
+
+    #navbar-3 {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 85% 15%;
+      align-items: center;
+      background-color: #dd0285;
+      padding: 0 5%;
+      color: white;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .dropdown .dropbtn,
+    .dropbtn-1,
+    .dropbtn-2,
+    .dropbtn-3,
+    .dropbtn-4,
+    .dropbtn-5,
+    .dropbtn-6,
+    .dropbtn-7 {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font: inherit;
+      margin: 0;
+    }
+
+    .dropdown:hover .dropbtn,
+    .dropbtn-1,
+    .dropbtn-2,
+    .dropbtn-3,
+    .dropbtn-4,
+    .dropbtn-5,
+    .dropbtn-6,
+    .dropbtn-7 {
+      background: rgba(0, 0, 0, 0.1)
+    }
+
+    .dropdown:hover .dropbtn:hover~#makeup {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn-1:hover~#skin {
+      display: block;
+    }
+
+    .dropbtn-2:hover~#hair {
+      display: block;
+    }
+
+    .dropbtn-3:hover~#personal-care {
+      display: block;
+    }
+
+    .dropbtn-4:hover~#mom-baby-care {
+      display: block;
+    }
+
+    .dropbtn-5:hover~#fragrance {
+      display: block;
+    }
+
+    .dropbtn-6:hover~#ayurveda {
+      display: block;
+    }
+
+    .dropbtn-7:hover~#brand {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: fixed;
+      background-color: #fff;
+      top: 200px;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      padding: 0 5%;
+    }
+
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: auto;
+      padding: 20px;
+      /* padding: 10px; */
+    }
+
+    .column h3 {
+      color: #000;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .column a {
+      float: none;
+      color: #bbb;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .column a:hover {
+      background-color: #ddd;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .cart {
+      display: flex;
+      justify-content: center;
+    }
+
+    .cart>div {
+      margin-right: 45px;
+
+    }
+
+    #home #Middle-Portion {
+      display: flex;
+      width: 90%;
+      margin: auto;
+      padding: 20px 10px;
+    }
+
+    #Box-1 {
+      height: 400px;
+      width: 450px;
+    }
+
+    #Box-1 .category {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 5px 0;
+    }
+
+    #Box-1 .category img {
+      height: 20px;
+      width: 20px;
+    }
+
+    #Box-1 .category .name {
+      font-size: 15px;
+      padding-left: 5px;
+    }
+
+    #Box-1 .category .name:hover {
+      color: rgb(209, 13, 128);
+      cursor: pointer;
+    }
+
+    #Box-1 .category i {
+      color: #b0b0b0;
+      font-size: 12px;
+    }
+
+    #Box-2 {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: calc(100% - 450px);
+    }
+
+    #Box-2>img {
+      width: 100%;
+      height: auto;
+      transform: translate(-50%);
+    }
+
+    #center-portion {
+      width: 90%;
+      margin: auto;
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    #center-portion>img {
+      width: 100%;
+    }
+
+    #images {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: auto;
+      /* gap: 20px; */
+      width: 90%;
+      margin: auto;
+
+    }
+
+    #images>div {
+      text-align: center;
+      /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+      cursor: pointer;
+      border: 1px solid #ebebeb;
+      padding: 15px 10px;
+      background: #fff;
+    }
+
+    #images>div>img {
+      width: 100%;
+    }
+
+    #images>div>h2 {
+      margin: 30px, 0px, 10px, 0px;
+      color: rgb(209, 13, 128);
+      font-size: 20px;
+    }
+
+    #images .addcart-btn {
+    background-color: rgb(209, 13, 128);
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    }
+
+    #images .addcart-btn i {
+      margin-right: 5px;
+    }
+
+    #images>div>.heart > .color{
+    background-color: rgb(209, 13, 128);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+
+    }
+
+
+    #images > div > .heart >.wishlist{
+     background-color:grey;
+     color: white;
+     border: none;
+     border-radius: 1px;
+     }
+     
+     #images > div > .heart >.wishlist:hover{
+     background-color:rgb(209, 13, 128);;
+     color: white;
+     }
+
+    #images>div>div {
+      margin: 30px, 0px, 10px, 0px;
+    }
+
+    #summer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+    }
+
+    #summer>div {
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    #summer>div>img {
+      width: 100%;
+    }
+
+    #section {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 100px;
+      gap: 20px;
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
+
+    }
+
+    #section>div {
+      text-align: center;
+      display: block;
+      cursor: pointer;
+    }
+
+    #section>div>h4 {
+      margin: 30px, 0px, 10px, 0px;
+      font-size: 20px;
+    }
+
+    #section>div:hover {
+      background-color: rgb(209, 13, 128);
+
+    }
+
+    #center-portion-1 {
+      width: 90%;
+      margin: auto;
+      height: auto;
+      margin-top: 30px;
+
+    }
+
+    #center-portion-1>img {
+      width: 100%;
+    }
+
+    #center-portion-1>h2 {
+      color: grey;
+    }
+
+    #Bottom-Para {
+      width: 90%;
+      margin: auto;
+    }
+
+    #Bottom-Portion {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      background-color: black;
+      color: white;
+    }
+
+    #Bottom-Portion>div {
+      width: 23%;
+      height: 400px;
+      margin: auto;
+
+    }
+
+    #Bottom-Portion>div>h3 {
+      font-size: 20px;
+    }
+
+    .pink {
+      color: rgb(209, 13, 128);
+    }
+
+    #Bottom-Portion>div>p:hover {
+      color: rgb(209, 13, 128);
+    }
+
+    #Bottom-Portion {
+      width: 100%;
+      height: 400px;
+      display: flex;
+      background-color: black;
+      color: white;
+    }
+
+    #Bottom-Portion>div {
+      width: 23%;
+      height: 400px;
+      margin: auto;
+
+    }
+
+    #Bottom-Portion>div>h3 {
+      font-size: 20px;
+    }
+
+    .pink {
+      color: rgb(209, 13, 128);
+    }
+
+    #Bottom-Portion>div>p:hover {
+      color: rgb(209, 13, 128);
+    }
+
+    /* keep media queries at the bottom */
+    /* Medium screens */
+    @media all and (min-width: 451px) and (max-width: 750px) {
+      #navbar-1 {
+        display: flex;
+      }
+
+      #navbar-2 {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        margin: auto;
+      }
+
+      #navbar-3 {
+        width: 100%;
+        height: 30%;
+        /* background-color: #dd0285; */
+        /* padding: 1%; */
+        display: flex;
+        color: white;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* #Middle-Portion {
+      display: flex;
+      width: 100%;
+      height: auto;
+      margin: auto; 
+       justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 10px; 
+    } */
+
+      #Box-2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+
+      }
+
+      #images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 90%;
+
+      }
+
+      #summer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        width: 90%;
+      }
+
+      #section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* grid-template-rows: 100px; */
+        gap: 20px;
+        /* width: 90%; */
+
+      }
+
+      #images-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        width: 90%;
+        margin: auto;
+
+      }
+
+      #center-portion-1 {
+        width: 90%;
+
+      }
+
+      #Bottom-Para {
+        width: 90%;
+        margin: auto;
+      }
+
+      #Bottom-Portion {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        padding: 0 50px;
+      }
+
+      #Bottom-Portion>div {
+        width: 50%;
+        height: 400px;
+      }
+    }
+
+    /* Small screens */
+    @media all and (min-width: 100px) and (max-width: 450px) {
+      #navbar-1 {
+        display: flex;
+        width: 90%;
+      }
+
+      #images {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        width: 90%;
+      }
+
+      #images-1 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        width: 90%;
+        margin: auto;
+
+      }
+
+    }
+
+    #makeup-page {
+      display: none;
+    }
+
+    #content {
+      display: flex;
+      padding: 20px 5%;
+    }
+
+    #content #Box-1 {
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: 250px;
+      margin-right: 20px;
+    }
+
+    #content #Box-1 .item-1 {
+      border-bottom: 1px solid #ebebeb;
+      padding: 10px 5px;
+      position: relative;
+    }
+
+    #content #Box-1 .item-1 i{
+      color: #ebebeb;
+    }
+
+    /* #content #Box-1 .item-1 {
+      border-bottom: 1px solid #ebebeb;
+      padding: 5px;
+    } */
+
+    #content #Box-1 .item-2 {
+      padding: 10px 5px;
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    #content #Box-1 .item-3 {
+      font-size: 14px;
+      position: relative;
+      border-bottom: 1px solid #ebebeb;
+      padding: 10px 5px;
+    }
+
+    #content #Box-1 .item-4{
+      margin-top: 50px;
+    }
+
+    #content #Box-1 .item-4 img{
+      height: 400px;
+      width: 100%;
+    }
+
+    #content #Box-1 .item-3 i{
+      color: #ebebeb;
+    }
+
+    #content #Box-2 {
+      background-color: #fff;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      width: calc(100% - 270px);
+      padding: 20px;
+
+    }
+
+    #content #Box-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(14, auto);
+      gap: 20px;
+      width: 100%;
+      margin: auto;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    }
+
+    #content>#Box-3 {
+      margin-top: 100px;
+    }
+
+
+    #content #Box-3>div {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    #content #Box-3>div>img {
+      width: 100%;
+
+    }
+
+    #content #Box-3>div>h2 {
+      color: rgb(221, 17, 211);
+      font-size: 20px;
+    }
+
+    #content #images{
+      width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #content #Bottom-Para {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <!-- navbar-1 start -->
+    <div id="navbar-1" class="w-100">
+      <div class="w-100">
+        <img class="w-100" src="https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg" alt="">
+        <span class="play-btn"> <a target="_blank"
+            href="https://play.google.com/store/games?utm_source=apac_med&utm_medium=hasem&utm_content=Oct0121&utm_campaign=Evergreen&pcampaignid=MKT-EDR-apac-in-10"><img
+              src="https://assets.loseit.com/website/home/Download_GooglePlay.svg" alt=""></a></span>
+      </div>
+    </div>
+    <!-- navbar-1 end -->
+
+    <div id="navbar-2">
+      <!-- navbar-2 strat -->
+      <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" alt="">
+      <div class="search-wrap">
+        <div class="search-bar">
+          <select placeholder="All Categories">
+            <option>All Categories</option>
+            <option>----Makeup</option>
+            <option>-------Face</option>
+            <option>--------Foundation</option>
+            <option>--------Blush</option>
+            <option>--------Highlighter</option>
+            <option>---------Concelar</option>
+            <option>---------Compact & Powder</option>
+            <option>----------Face Primer</option>
+            <option>-----------Makeup Remover</option>
+          </select>
+          <div style="margin-left: 20px;">
+            <input type="text" placeholder="Enter Your Search...">
+            <span><i class="fa fa-search" aria-hidden="true" style="color: #bbb;"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="account">
+        <div class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></div>
+        <div class="acc-section">
+          <span class="user"><i class="fa fa-user" aria-hidden="true"></i></span>
+          <span>My Account</span>
+        </div>
+      </div>
+    </div>
+    <!-- navbar-2 end -->
+
+    <div id="navbar-3">
+      <!-- navbar-3 strat -->
+      <div class="dropdown">
+        <button class="dropbtn" onclick="showMakeUpPage()">MAKUP
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-1">SKIN
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-2">HAIR
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-3">PERSONAL CARE
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-4">MOM & BABY CARE
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-5"> FRAGARNCES
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-6"> AYURVEDA
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <button class="dropbtn-7"> BRANDS
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <div id="makeup" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>FACE</h3>
+              <a href="#">BB Cream</a>
+              <a href="#">Blush</a>
+              <a href="#">Bronzer</a>
+              <a href="#">CC Cream</a>
+              <a href="#">Counter</a>
+              <a href="#">Concealer</a>
+              <a href="#">Compact & Powder</a>
+              <a href="#">Face Primer</a>
+              <a href="#">Foundation</a>
+              <a href="#">Highlighters</a>
+              <a href="#">Loose Powder</a>
+              <a href="#">Makeup Kits</a>
+              <a href="#">Makeup Remover</a>
+              <a href="#">Setting Spray</a>
+            </div>
+            <div class="column">
+              <h3>EYE CARE</h3>
+              <a href="#">Dark Cricles</a>
+              <a href="#">Eye Contour Care</a>
+              <a href="#">Eye Cream</a>
+              <a href="#">Eye Masks</a>
+              <a href="#">Eye Serums</a>
+              <a href="#">Puffins</a>
+              <a href="#"> Under Eye Creams</a>
+              <a href="#"> Under Eye Wrinkles</a>
+            </div>
+            <div class="column">
+              <h3>LIPS </h3>
+              <a href="#">Lipstick</a>
+              <a href="#">Liquid Lipsticks</a>
+              <a href="#">Lip Liner</a>
+              <a href="#">Lip Gloss</a>
+              <a href="#">Lip Balm</a>
+              <a href="#">Lip Crayon</a>
+            </div>
+
+            <div class="column">
+              <h3>NAILS </h3>
+              <a href="#">Manicure & Pedicure Kits</a>
+              <a href="#"> Nail Polish</a>
+              <a href="#"> Nail Care</a>
+              <a href="#"> Nail Polish Sets </a>
+              <a href="#"> Nail Art Kits </a>
+              <a href="#"> Nail Polish Remover</a>
+            </div>
+
+            <div class="column">
+              <h3>TOOLS BRUSHES </h3>
+              <a href="#"> Blush Brush</a>
+              <a href="#"> Eyelash Curlers</a>
+              <a href="#"> Eye Brush</a>
+              <a href="#"> Face Brush </a>
+              <a href="#"> Lip Brush </a>
+              <a href="#"> Makeup Pouches</a>
+              <a href="#"> Mirrors</a>
+              <a href="#"> Sponges & Applicators</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="skin" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>EYE CARE</h3>
+              <a href="#">Dark Circles</a>
+              <a href="#">Eye Counter Care</a>
+              <a href="#">Eye Cream</a>
+              <a href="#">Eye Masks</a>
+              <a href="#">Eye Serums</a>
+              <a href="#">Puffins</a>
+              <a href="#">Eye Cream</a>
+            </div>
+            <div class="column">
+              <h3>FACE CARE</h3>
+              <a href="#">Anti Ageing Creams</a>
+              <a href="#"> Bleach Creams</a>
+              <a href="#"> Face Wash</a>
+              <a href="#"> Facial Wipes</a>
+              <a href="#"> Facial Oil</a>
+              <a href="#"> Facial Kits</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="hair" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>HAIR CAER</h3>
+              <a href="#">Color Protection</a>
+              <a href="#">Dandruff</a>
+              <a href="#"> Dry Shampoo</a>
+              <a href="#"> Gels & Waxes</a>
+              <a href="#"> Hair Spray</a>
+              <a href="#"> Hair Color / Dye</a>
+              <a href="#"> Hair Creams & Masks</a>
+              <a href="#"> Hair Styling</a>
+            </div>
+            <div class="column">
+              <h3>HAIR LOSS</h3>
+              <a href="#"> Conditioner</a>
+              <a href="#"> Hair Oil</a>
+              <a href="#"> Hair Serum</a>
+              <a href="#"> Shampoo</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="personal-care" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>BATH & BODY</h3>
+              <a href="#"> Body Cleansers</a>
+              <a href="#"> Body Massage Oil</a>
+              <a href="#"> Body Wash</a>
+              <a href="#"> Cream</a>
+              <a href="#"> Essential Oil</a>
+              <a href="#"> Foot Cream</a>
+              <a href="#"> Serum & Exfoliants</a>
+            </div>
+            <div class="column">
+              <h3>BATHING ACCESSORIES</h3>
+              <a href="#"> Bath Brushes</a>
+              <a href="#"> Loofahs</a>
+              <a href="#"> Shower Caps</a>
+            </div>
+            <div class="column">
+              <h3> BATH & SHOWER</h3>
+              <a href="#">Body Soaps</a>
+              <a href="#"> Shower Gel</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="mom-baby-care" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>BABY CARE</h3>
+              <a href="#"> Bath Time</a>
+              <a href="#"> Diapers</a>
+              <a href="#"> Lotion & Cream</a>
+              <a href="#"> Oils</a>
+              <a href="#"> Powder</a>
+              <a href="#"> Shampoo</a>
+              <a href="#"> Soaps</a>
+              <a href="#"> Sterilizer & Cleaners</a>
+              <a href="#"> Rash Cream</a>
+              <a href="#"> Wipes</a>
+            </div>
+
+            <div class="column">
+              <h3>MOM Care</h3>
+              <a href="#"> Lotion & Creams</a>
+              <a href="#"> Personal Care</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="fragrance" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3> Perfumes</h3>
+              <a href="#"> Deodorants</a>
+              <a href="#"> Body Mist / Spray</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="ayurveda" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3>NATURAL SKIN CARE</h3>
+              <a href="#"> Body Wash</a>
+              <a href="#"> Body Lotion</a>
+              <a href="#"> Cleaners</a>
+              <a href="#"> Cream</a>
+              <a href="#"> Eye Care</a>
+              <a href="#"> Fash Wash</a>
+              <a href="#"> Gel</a>
+              <a href="#"> Lip Care</a>
+              <a href="#"> Mask</a>
+              <a href="#"> Pack</a>
+              <a href="#"> Scrub</a>
+              <a href="#"> Sun Protection</a>
+            </div>
+            <div class="column">
+              <h3>NATURAL HAIR CARE</h3>
+              <a href="#"> Conditioner</a>
+              <a href="#"> Hair Oils</a>
+              <a href="#"> Hair Serum</a>
+              <a href="#"> Hair Gel</a>
+              <a href="#"> Shampoo</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="brand" class="dropdown-content">
+          <div class="row">
+            <div class="column">
+              <h3> TOP BRANDS</h3>
+              <a href="#"> LOREAL</a>
+              <a href="#"> VLCC</a>
+              <a href="#"> LAKME</a>
+              <a href="#"> JOY</a>
+              <a href="#"> AROMA MAGIC</a>
+              <a href="#"> LOTUS HERBALS</a>
+              <a href="#"> BIOTIQUE</a>
+              <a href="#"> CHICCO</a>
+              <a href="#"> MAMAEARTH</a>
+              <a href="#"> MAYBELLINE</a>
+              <a href="#"> NEUTROGENA</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="cart">
+        <div> MY CART -₹ <span id="price"></span></div>
+      </div>
+    </div>
+
+    <!-- navbar-3 end -->
+
+    <div id="home">
+      <div id="Middle-Portion">
+        <div id="Box-1">
+          <div>
+            <h4> <span style="margin-right: 5px;"><i class="fa fa-bars" aria-hidden="true"></i></span> ALL CATEGORIES
+            </h4>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt="">
+            <span class="name">Makeup</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/skin-small.png" alt="">
+            <span class="name">Skin</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/hair-small.png" alt="">
+            <span class="name">Hair</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/personal-care-small.png" alt="">
+            <span class="name">Personal Care</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/mom-baby-care-small.png" alt="">
+            <span class="name">Mom & Baby Care</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/fragrance.png" alt="">
+            <span class="name">Fragrance</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="category">
+            <img src="https://www.beautybebo.com/pub/media/ayurveda.png" alt="">
+            <span class="name">Ayurveda</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+          </div>
+
+        </div>
+
+        <div id="Box-2">
+          <!-- <img src="https://images.unsplash.com/photo-1534531904504-65da6a62d34f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=462&q=80" alt=""> -->
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.beautybebo.com/pub/media/mega-menu/slider-1.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="center-portion">
+        <img src="https://www.beautybebo.com/pub/media/blue_heaven.jpg" alt="">
+      </div>
+
+      <div id="images">
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908005358923-04.png"
+            alt="">
+          <p> Organic Harvest Hair Oil For Hair Strengtheing </p>
+          <p></p>
+          <h2>₹ 581.00 10% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(581)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/3/239dca18906143701724_1.jpg"
+            alt="">
+          <p> Organic Harvest Aloe vera Gel Enriched With 100% Pure Aloe Vera </p>
+          <p></p>
+          <h2>₹ 439.00 11% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(439)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/2/e278ca18906143701717_1.jpg"
+            alt="">
+          <p> Organic Harvest Aloe vera Gel Enriched With 100% Pure Aloe Vera</p>
+          <p></p>
+          <h2>₹ 439.00 11% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(439)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8908005358084.png"
+            alt="">
+          <p> Organic Harvest Hair Spa For Dry & Damage</p>
+          <p></p>
+          <h2>₹ 806.00 10% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(806)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="summer">
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/mega-menu/beeone.jpg" alt="">
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/mega-menu/lotus.jpg" alt="">
+        </div>
+      </div>
+
+      <div id="section">
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/makeup_1.png" alt="">
+          <h4>Makeup</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/skin.png" alt="">
+          <h4>Skin</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/hair.png" alt="">
+          <h4>Hair</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/personal-care.png" alt="">
+          <h4>Personal Care</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/mom-baby-care.png" alt="">
+          <h4>Mom & Baby Care</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/eye_1.png" alt="">
+          <h4>Eye</h4>
+        </div>
+
+        <div>
+          <img src="https://www.beautybebo.com/pub/media/catalog/category/fragrance_3.png" alt="">
+          <h4>Fragrance</h4>
+        </div>
+
+      </div>
+
+      <div id="images">
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/41phdvteb8l._sl1100_.jpg"
+            alt="">
+          <p> Plum Prep Set Go Face Primer</p>
+          <p></p>
+          <h2>₹ 473.00 10% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51dfv9yk60l._sl1080__3_1.jpg"
+            alt="">
+          <p> Plum Matterrific Lipstick </p>
+          <p></p>
+          <h2>₹ 439.00 12% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(439)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/5/75e7324plumx00000244a_2.jpg"
+            alt="">
+          <p> Plum Matte In Heaven Liquid Lipstick</p>
+          <p></p>
+          <h2>₹ 439.00 11% off</h2>
+          <div class="heart">
+            <button class="addcart-btn" onclick="addCart(439)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+        </div>
+
+        <div>
+          <img
+            src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/7/d71e283cflt0110cmp5427_7.jpg"
+            alt="">
+          <p> Plum Legit Matte Taic-Free Compact with SPF-15</p>
+          <p></p>
+          <h2> ₹ 473.00 10% off</h2>
+          <div>
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="center-portion-1">
+        <img src="https://www.beautybebo.com/pub/media/mega-menu/offer.gif" alt="">
+        <h2> Welcome To Beauty Products Online Shopping India-Beauty Bebo</h2>
+      </div>
+
+      <div id="Bottom-Para">
+        <p>If you are looking for a flawless radiant face outlook for a special occasion, then we have the perfect tips
+          for
+          you. As you must already know, the conspicuous flawless outlook you want for your wedding, a date, a dinner
+          party
+          or for a modelling competition is only achieved through makeup.</p>
+        <p>Don’t get me wrong, you are naturally beautiful, that’s obvious. But everyone else is, so how will you will
+          you
+          ensure that you are different? Read on for hot irresistible tips before you buy beauty products online!</p>
+        <h3>Clean Your Face First!</h3>
+        <p>Before embarking on any makeup, always ensure that your face is clean. Need some assistance in absolute
+          cleaning?
+          Visit our range of face wash beauty products online for your best pick. We have made it our duty to carefully
+          select the best products for you, so that you don’t experience breaks and allergies after use. So now you can
+          be
+          confident that your buy cosmetic online shopping will be worth your time and effort.</p>
+        <p>Wondering then how you will make a choice among the spectrum available? Most of our products are purely
+          natural
+          in ingredient, so you can as well check for your favorite ingredient combination. If not sure, we are still
+          here
+          for you. We can help narrow down your options, together with you.</p>
+        <h3>Apply a Moisturizer</h3>
+      </div>
+
+    </div>
+
+    <div id="makeup-page">
+      <div id="content">
+        <div id="Box-1">
+          <div class="item-1">
+            <span>Categories</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+          <div class="item-2">
+             <h5>SHOP BY</h5>
+          </div>
+
+          <div class="item-3">
+            <span>SKIN TYPE</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="item-3">
+            <span>COLOR</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="item-3">
+            <span> PRICE</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="item-3">
+            <span> BRAND</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="item-3">
+            <span> SHADE</span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+
+          <div class="item-3">
+            <span>  FORMULATION </span>
+            <span style="position: absolute; right: 50px;"><i class="fa fa-plus" aria-hidden="true"></i></span>
+          </div>
+
+          <div class="item-4">
+            <img src="https://www.beautybebo.com/pub/media/free-delivery.jpg">
+          </div>
+       </div>
+
+        <div id="Box-2">
+          <h4>MAKEUP</h4>
+          <div id="images">
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/1/41phdvteb8l._sl1100_.jpg"
+                alt="">
+              <p>
+                Plum Prep Set Go Face Primer </p>
+              <p></p>
+              <h2>₹ 473.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+             </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51dfv9yk60l._sl1080__3_1.jpg"
+                alt="">
+              <p>
+                Plum Matterrific Lipstick</p>
+              <p></p>
+              <h2>₹ 439.00 12% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(439)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/7/5/75e7324plumx00000244a_2.jpg"
+                alt="">
+              <p>
+                Plum Matte In Heaven Liquid Lipstick </p>
+              <p></p>
+              <h2>₹ 434.00 13% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(434)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/7/d71e283cflt0110cmp5427_7.jpg"
+                alt="">
+              <p>
+                Plum Legit Matte Talc-Free Compact With SPF15 </p>
+              <p></p>
+              <h2>₹ 473.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/6/66ab2138906087778288_2.jpg"
+                alt="">
+              <p>
+                Mamaearth Glow Serum Foundation With Vitamin C & Turmeric For 12-Hour </p>
+              <p></p>
+              <h2>₹ 473.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/5/551d3ed8906087778639_3.jpg"
+                alt="">
+              <p> Mamaearth Glow Oil Control Compact SPF 30 With Vitamin C & Turmeric</p>
+              <p></p>
+              <h2> ₹473.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/_/3_7_1_1.jpg"
+                alt="">
+              <p> Mamaearth Glow Oil Control Compact SPF 30 With Vitamin C & Turmeric</p>
+              <p></p>
+              <h2> ₹473.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(473)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/w/i/with_monocarton.jpg"
+                alt="">
+              <p>Mamaearth Soothing Waterproof Eyeliner With Almond Oil & Castor Oil For</p>
+              <p></p>
+              <h2> ₹349.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(349)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/e/z/ezgif-3-78e7fbbb25.jpg"
+                alt="">
+              <p>Lakme Absolute Liquid Highlighter</p>
+              <p></p>
+              <h2> ₹621.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(621)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/7/277cf77missc00000081_1.jpg"
+                alt="">
+              <p>Miss Claire Eyelash Glue - Clear Tone</p>
+              <p></p>
+              <h2> ₹322.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(322)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/d/0/d07adf529204_i-8901030867583.jpg"
+                alt="">
+              <p>Lakme Absolute Liquid Highlighter</p>
+              <p></p>
+              <h2> ₹550.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(550)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/b/5b990e16902395773146_3.jpg"
+                alt="">
+              <p>Maybelline New York Fit Me Primer - Dewy+Smooth</p>
+              <p></p>
+              <h2> ₹550.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(550)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/9/6902395735908_0.jpg"
+                alt="">
+              <p>L'Oreal Paris Infallible Full Wear Concealer</p>
+              <p></p>
+              <h2> ₹735.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(735)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/1/51c18ra5qzs._sl1500_.jpg"
+                alt="">
+              <p>Faces Canada Ultime Pro Matte Play Eyeliner</p>
+              <p></p>
+              <h2> ₹604.00 7% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(604)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/b/c/bcf6c6c8904052434726__2_.jpg"
+                alt="">
+              <p>Colorbar Intensify Liquid Gel Eyeliner - Arabian Nights</p>
+              <p></p>
+              <h2> ₹699.00 7% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(699)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/1/618a4rcg7il._sl1500_.jpg"
+                alt="">
+              <p>NYX Professional Makeup Pore Filler</p>
+              <p></p>
+              <h2> ₹1378.00 5% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(1378)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/a/r/artboard_1_5.jpg"
+                alt="">
+              <p>Mamaearth Naturally Matte Lip Serum - Matte Liquid Lipstick With Vitamin C & E</p>
+              <p></p>
+              <h2> ₹539.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(539)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/9/8904052409748-2.jpg"
+                alt="">
+              <p>Colorbar Infinite 24Hrs Eyeliner</p>
+              <p></p>
+              <h2> ₹651.00 7% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(651)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_91.jpg"
+                alt="">
+              <p>Miss Claire Mineral Blusher Kit - 3716-4-04</p>
+              <p></p>
+              <h2> ₹338.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(338)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/_/3_125_1.jpg"
+                alt="">
+              <p>NYX Professional Makeup The Marshmellow Primer
+              </p>
+              <p></p>
+              <h2> ₹1425.00 5% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(1425)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/1/_/1_210_13.jpg"
+                alt="">
+              <p>Blue Heaven 12-In-1 Bling Eyeshadow Palette - Cocktail Fever - (Pack Of 2)
+              </p>
+              <p></p>
+              <h2> ₹ 450.00 5% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(450)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/1/21_12_6.jpg"
+                alt="">
+              <p>Faces Canada Ultime Pro Eye Shadow Palette - Nude 01
+              </p>
+              <p></p>
+              <h2> ₹ 920.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(920)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/0/20_12_5.jpg"
+                alt="">
+              <p>NYX Professional Makeup Epic Ink Liner - Black
+              </p>
+              <p></p>
+              <h2> ₹ 759.00 8% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(759)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/8/58.jpg"
+                alt="">
+              <p>PAC Transparent Mascara
+              </p>
+              <p></p>
+              <h2> ₹ 325.00</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(325)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/6/56_2.jpg"
+                alt="">
+              <p>Colorbar Lash Illusion Mascara Lengthening Lash & Volumising Mascara
+              </p>
+              <p></p>
+              <h2> ₹ 446.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(446)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/4/54_2.jpg"
+                alt="">
+              <p>Faces Canada Peaches N Cream Tinted Moisturizer - Light 01
+              </p>
+              <p></p>
+              <h2> ₹ 539.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(539)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/4/44_2_3.jpg"
+                alt="">
+              <p>Mamaearth Cherry Tinted 100% Natural Lip Balm With Cherry And Coconut Oil
+              </p>
+              <p></p>
+              <h2> ₹ 299.00 </h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(299)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/4/4/44_2_3.jpg"
+                alt="">
+              <p>Mamaearth Cherry Tinted 100% Natural Lip Balm With Cherry And Coconut Oil
+              </p>
+              <p></p>
+              <h2> ₹ 299.00 </h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(299)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/9/39_2_2.jpg"
+                alt="">
+              <p>Mamaearth Charcoal Black Long Stay Kohl With Castor Oil And Chamomile For
+              </p>
+              <p></p>
+              <h2> ₹ 499.00 10% Off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(499)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/7/37_4_2.jpg"
+                alt="">
+              <p>Lakme Absolute Illuminating Blush Shimmer Brick - In Pink
+              </p>
+              <p></p>
+              <h2> ₹ 689.00 5% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(689)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/3/6/36_4_2.jpg"
+                alt="">
+              <p>Faces Canada Ultime Pro HD All That Glow Highlighter
+              </p>
+              <p></p>
+              <h2> ₹ 809.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(809)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/8/_/8_41_4.jpg"
+                alt="">
+              <p>Mamaearth Rose Tinted 100% Natural Lip Balm With Rose Oil And Castor Oil
+              </p>
+              <p></p>
+              <h2> ₹ 809.00 10% off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(809)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/6/_/6_87_6.jpg"
+                alt="">
+              <p>PAC Lower Lash Mascara
+              </p>
+              <p></p>
+              <h2> ₹ 545.00 </h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(545.00)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_90_5.jpg"
+                alt="">
+              <p>Faces Canada Ultime Pro A Matte Made In Heaven Ink Eyeliner
+              </p>
+              <p></p>
+              <h2> ₹ 539.00 10%off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(539)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/2/_/2_174_6.jpg"
+                alt="">
+              <p>Blue Heaven Bling Matte + Metallic Eyeshadow Palette - Subtle Romance -
+              </p>
+              <p></p>
+              <h2> ₹ 450.00 10%off</h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(450)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+
+            <div>
+              <img
+                src="https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/5/_/5_90_3.jpg"
+                alt="">
+              <p>Mamaearth Ubtan Tinted 100% Natural Lip Balm With Turmeric & Saffron
+              </p>
+              <p></p>
+              <h2> ₹ 299.00 </h2>
+              <div class="heart">
+            <button class="addcart-btn" onclick="addCart(299)"><span class="bucket"><i class="fa fa-shopping-basket"
+                  aria-hidden="true"></i></span>Add to cart </button>
+                  <button class="wishlist"><i class="fa fa-heart" aria-hidden="true"></i></button>
+          </div>
+            </div>
+          </div>
+
+          <div id="Bottom-Para">
+            <h6> Tips on Best Make-up for Winter</h6>
+    
+            <p>Winter dictates a drier and even flaky skin, that we all agree. This does not, however, mean that our face
+              and neck should have a gloomy appearance. At Beauty Bebo, we believe that all you have to do is change your
+              make-up combination.</p>
+    
+            <p>Better still, we provide these makeup kits online, so you don’t have to stress your skin in the cold looking
+              for makeup solutions.
+    
+              Let’s get the show on the road on some of the basics of the best makeup for winter;</p>
+    
+            <h6> Include Moisturizing Solutions</h6>
+    
+            <p>During winter, as said before, your skin will run dry. Thus, always have a moisturizer in your kit. Our
+              nourishing natural moisturizers will sort you out on this.</p>
+    
+            <p>Cream or liquefied foundation should also replace your ponds and powders. This way, you will treat the skin
+              that is threatening to go flaky, while maintaining an attractive outlook.</p>
+    
+            <p>The highlighter should also be liquid. Primer lipstick that leaves a luminous glow will finish the pretty
+              look.</p>
+    
+            <p> Let your neck, lips, eyes and face in general not change for the worse, but for the better. Surprise
+              everyone you come across with your new winter makeup solutions. </p>
+    
+            <p> In summary, ensure that the better part of your make-up kit is filled with moisturizing agents.</p>
+    
+            <h6> Feel Free to Reach Out to Beauty Bebo</h6>
+    
+            <p>Not sure about the exact combinations for your sensitive skin? Reach out to Beauty Bebo. Our friendly
+              customer care is always online and on call to answer your queries and give advice where necessary. </p>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Bottom-Portion">
+      <div>
+        <h3> CONTACT INFO</h3>
+        <p class="pink">-------</p>
+        <p> (+91) 7877061041</p>
+        <p> support@beautybebo.com
+          sales@beautybebo.com</p>
+        <h4>Open time: 10:00AM - 7:00PM</h4>
+      </div>
+
+      <div>
+        <h3>QUICK LINKS</h3>
+        <p class="pink">-------</p>
+        <p> ~ About us</p>
+        <p> ~ Contact Us</p>
+        <p> ~ Terms & Conditions </p>
+        <p> ~ Privacy Policy </p>
+        <p> ~ Return and Refund Policy</p>
+        <p> ~ Shipping Policy</p>
+      </div>
+
+      <div>
+        <h3>CUSTOMER INFO</h3>
+        <p class="pink">-------</p>
+        <p> ~ My Account</p>
+        <p> ~ Track your Order</p>
+        <p> ~ Order Returns</p>
+        <p> ~ Wishlist</p>
+        <p> ~ News & Events</p>
+        <p> ~ FAQ</p>
+      </div>
+
+      <div>
+        <h3>CATEGORIES</h3>
+        <p class="pink">-------</p>
+        <p> ~ Makeup</p>
+        <p> ~ Skin </p>
+        <p> ~ Hair</p>
+        <p> ~ Personal Care </p>
+        <p> ~ Mom & Baby Care </p>
+        <p> ~ Fragrance </p>
+        <p> ~ Ayurveda</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<script>
+  document.querySelector(".w-100").addEventListener("click", function () {
+    document.getElementById("mom-baby-care").style = "Display-Block";
+  })
+
+  function showMakeUpPage() {
+    let homePage = document.getElementById("home");
+    homePage.style.display = "none"
+
+    let makeupPage = document.getElementById("makeup-page");
+    makeupPage.style.display = "block"
+  }
+
+  var cartItemPrice = 0
+  cartItemPrice = localStorage.setItem("cartItemPrice", 0);
+
+
+  function addCart(price) {
+    var cartItemPrice = 0;
+    var ele = document.getElementById("price");
+    if (!localStorage.getItem("cartItemPrice")) {
+      localStorage.setItem("cartItemPrice", price);
+      ele.innerHTML = price;
+    } else {
+      cartItemPrice = localStorage.getItem("cartItemPrice");
+      localStorage.setItem("cartItemPrice", parseFloat(cartItemPrice) + price);
+      ele.innerHTML = parseFloat(cartItemPrice) + price;
+    }
+  }
+</script>
